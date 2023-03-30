@@ -17,6 +17,18 @@ namespace TcKimlikNoDogrula
             InitializeComponent();
         }
 
- 
+        private void btnKontrolEt_Click(object sender, EventArgs e)
+        {
+            TCKimlikNoDogrulama.KPSPublic kps = new TCKimlikNoDogrulama.KPSPublic();
+           bool kontrol = kps.TCKimlikNoDogrula(long.Parse(txtTCKimlikNo.Text), txtIsim.Text.ToUpper(), txtSoyisim.Text.ToUpper(), int.Parse(txtDogumYili.Text));
+            if (kontrol)
+            {
+                MessageBox.Show("Bilgileriniz doğrulandı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Bilgileriniz doğrulanamadı", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

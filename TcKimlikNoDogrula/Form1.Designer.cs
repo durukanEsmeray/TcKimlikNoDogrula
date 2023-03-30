@@ -143,6 +143,7 @@
             this.btnKontrolEt.TabIndex = 0;
             this.btnKontrolEt.Text = "Kontrol et";
             this.btnKontrolEt.UseVisualStyleBackColor = true;
+            this.btnKontrolEt.Click += new System.EventHandler(this.btnKontrolEt_Click);
             // 
             // Form1
             // 
